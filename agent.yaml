@@ -1,0 +1,11 @@
+spec_version: "0.1.0"
+name: backup-encryption-evidence-checker
+version: 0.1.0
+description: Check backup declarations for encryption evidence and key recovery ownership.
+skills:
+  - backup-encryption-evidence-checker-skill
+tools:
+  - review-backup-encryption-evidence-checker
+tags:
+  - cybersecurity
+  - evidence-driven

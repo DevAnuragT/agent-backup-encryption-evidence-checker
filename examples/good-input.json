@@ -1,0 +1,7 @@
+{
+  "backup_sets": [
+    "record-1"
+  ],
+  "encryption_method": "evidence-record",
+  "key_recovery_owner": "evidence-record"
+}

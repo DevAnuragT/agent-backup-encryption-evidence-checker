@@ -1,0 +1,54 @@
+{
+  "name": "review-backup-encryption-evidence-checker",
+  "description": "Run Backup Encryption Evidence Checker",
+  "version": "0.1.0",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "payload": {
+        "type": "object",
+        "properties": {
+          "backup_sets": {
+            "type": "array",
+            "description": "backup sets"
+          },
+          "encryption_method": {
+            "type": "string",
+            "description": "encryption method"
+          },
+          "key_recovery_owner": {
+            "type": "string",
+            "description": "key recovery owner"
+          }
+        },
+        "required": [
+          "backup_sets",
+          "encryption_method",
+          "key_recovery_owner"
+        ]
+      }
+    },
+    "required": [
+      "payload"
+    ]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      },
+      "score": {
+        "type": "object"
+      },
+      "findings": {
+        "type": "array"
+      }
+    }
+  },
+  "implementation": {
+    "type": "script",
+    "path": "review-backup-encryption-evidence-checker.py",
+    "runtime": "python3"
+  }
+}
